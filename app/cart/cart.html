@@ -1,0 +1,55 @@
+<main>
+	<h3>Shopping Cart</h3>
+	<div class="container">	
+		<div class="row" ng-repeat="valuable in products">
+			<div class=".col-md-6">	
+				<div>
+					<img src={{valuable.image_url}}>
+				</div>
+
+				<div>
+					<div id="product-description">
+						<b>{{valuable.name}}</b>
+						<br>
+						{{valuable.description}}
+					</div>
+					<br>
+					<input type="checkbox" ng-model="valuable.gift"/>This is a gift</input>
+				</div>
+
+				
+				<div>
+					Price: <b>{{valuable.price}}</b>
+				</div>
+				
+
+				<div>
+					Quantity:
+					<br> 
+					<select ng-init="valuable.quantity" ng-change="orderTotal()" ng-model="valuable.quantity">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+					</select>
+					<!--
+					Research how to put an ng-model on an option tag
+					{{valuable.quantity}}
+					-->
+					<br><br>
+					<a ng-click="deleteFunction">delete</a>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div .col-md-4>
+				<div id="checkout">
+					<b>Order Subtotal({{itemCount}}): {{subTotal}}</b>
+					<br><br>
+					<button type="button">Proceed to Checkout</button>
+				</div>
+			</div>		
+		</div>
+	</div>
+</main>

@@ -1,0 +1,17 @@
+'use strict';
+
+angular.module('myApp.cart', ['ngRoute'])
+
+.config(['$routeProvider', function($routeProvider) {
+  
+  $routeProvider
+  	.when('/cart', {
+    	templateUrl: 'cart/cart.html',
+    	controller: 'cartCtrl'
+  });
+
+}])
+
+.controller('cartCtrl', [function() {
+
+}]);

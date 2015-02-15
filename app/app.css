@@ -1,0 +1,67 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+h3 {
+  margin: 10px 50px;
+}
+
+img {
+  display: block;
+  max-height: 100px;
+  max-width: 70px;
+  height: auto;
+  width: auto;
+}
+
+.row {
+  border: solid grey 1px;
+  border-radius: 10px;
+  display: inline-block;
+  margin: 10px 50px;
+}
+
+main > div > div > div > div {
+  float:left;
+  margin: 10px 30px;
+}
+
+button {
+  background-color: #FFCC00;
+  border-radius: 10px;
+}
+
+#checkout {
+  margin: 10px;
+}
+
+#product-description {
+  max-width: 400px;
+}
